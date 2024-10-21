@@ -1,0 +1,346 @@
+html {
+  font-size: 62.5%;
+}
+h1 {
+  color: #00256c;
+  position: relative;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: left;
+  vertical-align: top;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Sora", sans-serif;
+  color: #00256c;
+
+  background-image: url("/asses/favicon/background.png"); /* Đường dẫn đến hình ảnh */
+  background-size: cover; /* Để hình ảnh phủ toàn bộ vùng chứa */
+  background-position: center; /* Căn giữa hình ảnh */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+}
+.required {
+  color: red;
+}
+:root {
+  --font-heading: "Sora";
+  --font-content: "Open Sans";
+  --primary-color: #21a9de;
+  --header-bg: #ffffff;
+  --partners-bg: #f6fbff;
+  --desc-color: #5f6267;
+}
+
+/* ========== common ========== */
+/* se co nhung the khong an theo thuoc tinh chung */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*
+  .container {
+  
+    width: 1170px;
+    margin: 0 auto;
+    max-width: calc(100% - 48px);
+  }*/
+a {
+  text-decoration: none;
+}
+.btn {
+  /* box chua */
+  display: inline-block;
+  min-width: 205px;
+  line-height: 60px;
+  border-radius: 30px;
+  background: var(--primary-color);
+
+  /* text */
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.btn:hover {
+  /* Lam mo nen */
+  opacity: 0.9;
+}
+.section-heading {
+  color: var(--header-bg);
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+.section-desc {
+  color: #575f66;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.67;
+}
+.control {
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+}
+.control__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #575f66;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.control__btn:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+.control__btn--next {
+  rotate: 180deg;
+}
+
+/* ========== header ========== */
+.header {
+  background: var(--header-bg);
+  width: 100%; /* Đặt chiều rộng của header là 100% */
+  height: 60px; /* Chiều cao của header */
+  display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.menu {
+  padding: 10px;
+  width: 1440px; /* Đặt chiều rộng menu chiếm toàn bộ chiều rộng của header */
+  max-width: 1400px; /* Giới hạn chiều rộng tối đa của menu */
+  margin: 0 auto; /* Căn giữa menu */
+  margin-left: 150px; /* Điều chỉnh khoảng cách bên trái của menu (thay đổi giá trị theo ý thích) */
+  display: flex;
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  justify-content: flex-start; /* Căn menu về bên trái */
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
+.navbar__link {
+  padding: 10px 21px;
+  color: #000; /* Thay đổi màu chữ thành đen */
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #000; /* Đảm bảo màu chữ khi hover cũng là màu đen */
+  text-shadow: none; /* Bỏ bỏ bóng chữ */
+  line-height: 1.75;
+}
+
+.robot-group {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin-left: auto; /* Push to the right */
+  padding: 10px; /* Add some padding */
+  border: 2px solid #9999ff; /* Purple border */
+  border-radius: 45px; /* Rounded corners */
+  background-color: #fff; /* Background color for contrast */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.robot-icon {
+  width: 24px; /* Icon size */
+  height: 24px; /* Icon size */
+  fill: #666666; /* Icon color */
+  margin-right: 8px; /* Space between icon and text */
+  transition: fill 0.3s ease; /* Smooth transition for icon color */
+}
+
+.group-name {
+  font-size: 1.6rem; /* Font size */
+  font-weight: 600; /* Make text bold */
+  color: #9999ff; /* Text color */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Change background and icon color on hover */
+.robot-group:hover {
+  background-color: #9999ff; /* Change background to purple */
+}
+
+.robot-group:hover .robot-icon {
+  fill: #ffffff; /* Change icon color to white */
+}
+
+/* Change text color on hover */
+.robot-group:hover .group-name {
+  color: #ffffff; /* Change text color to white */
+}
+
+/* ========== main ========== */
+.main {
+  padding-left: 80px;
+  display: flex;
+}
+.info {
+  width: 100%;
+}
+
+/*==== heading ====*/
+
+.heading {
+  text-align: center;
+  margin: 40px;
+  color: var(--header-bg);
+  font-size: 50px;
+  font-weight: 700;
+}
+
+/*==== Personal ====*/
+.main {
+  display: flex; /* Sử dụng flexbox */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 100vh; /* Đặt chiều cao của main là 100% viewport */
+  margin-top: -100px;
+}
+
+.logo-container {
+  text-align: center; /* Căn giữa logo và nội dung bên dưới */
+}
+
+.logo {
+  width: 300px; /* Kích thước logo */
+  height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+.subtitle {
+  margin-top: -25px; /* Điều chỉnh để đưa nội dung lên gần logo */
+  font-family: "Inter", sans-serif; /* Đặt kiểu chữ là Inter */
+  color: #666666; /* Màu chữ là #666666 */
+  font-size: 20px; /* Điều chỉnh kích thước chữ nếu cần */
+  text-align: center; /* Căn giữa nếu cần */
+}
+
+/* Phong cách cho ô nhập */
+.input-field {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.input-field input {
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px 0 0 5px; /* Bo góc bên trái */
+  padding: 0 50px 0 15px; /* Tăng padding phải để chừa chỗ cho icon */
+  height: 64px;
+  width: 552px; /* Chiều rộng của ô nhập */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border: none;
+}
+
+.input-field input:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f6f6f6;
+}
+
+.search-button {
+  position: absolute;
+  top: 0; /* Căn chỉnh với ô nhập */
+  right: 0; /* Đưa nút tìm kiếm vào bên phải */
+  width: 48px; /* Chiều rộng của nút tìm kiếm */
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc; /* Màu nền mặc định */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0 5px 5px 0; /* Bo góc bên phải */
+  border: none; /* Bỏ viền cho nút tìm kiếm */
+}
+
+.search-button:hover {
+  background-color: #9999ff; /* Màu khi hover */
+}
+
+/* test */
+.info__personal {
+  padding: 20px;
+  width: 250px;
+  height: 230px;
+  background: #fff;
+  text-align: center;
+
+  position: fixed;
+  right: 0; /* Đặt vị trí ở phía trái */
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.name__heading {
+  margin-top: 10px;
+  color: #00256c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.name__desc {
+  color: #9e9e9e;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.underlined {
+  margin: 10px 0 10px;
+  width: 270px;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.name__id,
+.name__functions {
+  color: #00256c;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.personal__page,
+.booked__tickets,
+.log_out {
+  padding-left: 20px;
+  margin: 10px auto;
+  /* width: 250px; */
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.personal__page:hover,
+.booked__tickets:hover,
+.log_out:hover {
+  border-radius: 10px;
+  background: #d9d9d9;
+}
